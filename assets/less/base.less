@@ -1,0 +1,350 @@
+body {
+    font-family: 'Noto Sans', sans-serif !important;
+    color: #111111 !important;
+}
+@media (min-width: 1440px) {
+    .container {
+        max-width: 112rem !important;
+    }
+}
+a {
+    position: relative;
+    color: #111111 !important;
+    -webkit-transition: all .3s !important;
+    -moz-transition: all .3s !important;
+    -ms-transition: all .3s !important;
+    -o-transition: all .3s !important;
+    transition: all .3s !important;
+}
+header, main, footer {
+    width: 100%;
+    height: 100%;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    &.animate-style {
+        animation: zoompic 8s ease-in-out infinite alternate;
+        -webkit-animation: zoompic 8s ease-in-out infinite alternate;
+        object-fit: cover;
+    }
+}
+@keyframes zoompic {
+    0% {
+        -moz-transform: scale(1) rotate(0deg);
+        -o-transform: scale(1) rotate(0deg);
+        -ms-transform: scale(1) rotate(0deg);
+        -webkit-transform: scale(1) rotate(0deg);
+        transform: scale(1) rotate(0deg);
+        -moz-transform: rotate(0degdeg);
+        -o-transform: rotate(0degdeg);
+        -ms-transform: rotate(0degdeg);
+        -webkit-transform: rotate(0degdeg);
+        transform: rotate(0degdeg);
+    }
+    100% {
+        -moz-transform: scale(1.1) rotate(1.5deg);
+        -o-transform: scale(1.1) rotate(1.5deg);
+        -ms-transform: scale(1.1) rotate(1.5deg);
+        -webkit-transform: scale(1.1) rotate(1.5deg);
+        transform: scale(1.1) rotate(1.5deg);
+    }
+}
+ul, li ol {
+    margin: 0 !important;
+    padding: 0;
+    list-style-type: none;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0 !important;
+}
+input, button {
+    overflow: visible;
+    border: none;
+    &:focus {
+        outline: 0;
+    }
+}
+.wrapper {
+    display: grid;
+    grid-column-gap: 1.25rem;
+    grid-template-columns: repeat(13, minmax(0, 1fr));
+    &__main {
+        grid-column: ~"2 / 14";
+        -ms-grid-row: 1;
+        grid-row: 1;
+    }
+    &__aside {
+        grid-column: 1;
+        grid-row: 1;
+    }
+}
+#button-menu {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    transition: all .2s;
+    position: fixed;
+    &:hover {
+        background: rgb(245, 245, 245);
+        border-radius: 52px;
+        cursor: pointer;
+    }
+    .line {
+        width: 17px;
+        height: 2px;
+        background: #000;
+        margin: 2px 0;
+    }
+}
+.search-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &:before {
+        top: 50%;
+        position: absolute;
+        left: 1.5rem;
+        width: 20px;
+        height: 20px;
+        content: "";
+        background: url('./assets/imgs/icons/icon-search.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform: translateY(-50%);
+    }
+    &__input {
+        box-shadow: none;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        padding: 0 20px 0 50px;
+    }
+}
+.icon {
+    width: 24px;
+    height: 24px;
+    object-fit: unset;
+}
+#main {
+    padding: 20px 0;
+    width: 100%;
+    height: 100%;
+}
+.main-button {
+    background: #111111;
+    padding: 0 1.5rem;
+    height: 2.5rem;
+    line-height: 1.3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 64px;
+    transition: all .3s;
+    &__text {
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 700;
+    }
+    &:hover {
+        background: #333333;
+        text-decoration: none;
+    }
+    &--round {
+        background: #ffffff;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        padding: 0;
+    }
+    &__fillter {
+        background: transparent;
+        border: 1px solid #dfdfdf;
+        &__text {
+            color: #111111;
+        }
+        &:hover {
+            background: transparent;
+            border: 1px solid #929292;
+        }
+        &--grey {
+        	background: #f5f5f5;
+        	border: none;
+        	&:hover {
+        		background: #dfdfdf;
+        		border: none;
+        	}
+        }
+        &--white {
+        	border: none;
+        	background: #ffffff;
+        	&:hover {
+        		background: #f5f5f5;
+        		border: none;
+        	}
+        }
+    }
+    &__icon {
+        display: flex;
+        justify-content: center;
+    }
+}
+.title-head {
+    font-size: 22px;
+    font-weight: bold;
+    word-break: break-word;
+    width: 100%;
+}
+.desc-head {
+	font-size: 14px;
+	margin: 15px 0 !important;
+}
+.break-section {
+    width: 100%;
+    height: 1px;
+    background: #cccccc;
+}
+.group-option {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &__text {
+        width: 50%;
+        p {
+            color: #484848;
+            font-size: 14px;
+        }
+    }
+    .fillter-bar {
+        width: 50%;
+        justify-content: flex-end;
+        .main-button {
+            &:last-child {
+                margin: 0 0 0 5px;
+            }
+        }
+    }
+}
+.fillter-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    .main-button {
+        margin: 0 5px;
+        &:first-child {
+            margin: 0 5px 0 0;
+        }
+    }
+}
+.grid-column {
+    display: grid;
+    grid-gap: 20px;
+    &__item {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        &__img {
+            width: 100%;
+            height: 100%;
+        }
+        &__info {
+            padding: 32px;
+            width: 100%;
+            &__title {
+                font-weight: bold;
+                word-break: break-word;
+                font-size: 16px;
+                font-style: normal;
+            }
+            &__detail {
+                font-size: 14px;
+                color: #484848;
+            }
+        }
+        &-1 {
+            grid-area: gr-1;
+        }
+        &-2 {
+            grid-area: gr-2;
+        }
+        &-3 {
+            grid-area: gr-3;
+        }
+        &-4 {
+            grid-area: gr-4;
+        }
+        &-5 {
+            grid-area: gr-5;
+        }
+        &-6 {
+            grid-area: gr-6;
+        }
+        &-7 {
+            grid-area: gr-7;
+        }
+        &-8 {
+            grid-area: gr-8;
+        }
+        &-9 {
+            grid-area: gr-9;
+        }
+        &-10 {
+            grid-area: gr-10;
+        }
+        &-11 {
+            grid-area: gr-11;
+        }
+        &-12 {
+            grid-area: gr-12;
+        }
+    }
+    &--3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    &--4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    &--5 {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+    &--6 {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+    &--gallery-five {
+        grid-template-areas: "gr-1 gr-1 gr-2 gr-3"
+        					 "gr-1 gr-1 gr-2 gr-3"
+        					 "gr-1 gr-1 gr-2 gr-3"
+        					 "gr-1 gr-1 gr-4 gr-3"
+        					 "gr-1 gr-1 gr-4 gr-5"
+        					 "gr-1 gr-1 gr-4 gr-5"
+        					 "gr-1 gr-1 gr-4 gr-5";
+        grid-auto-rows: minmax(0,110px);
+    }
+    &--gallery-main {
+    	grid-template-areas: "gr-1 gr-1 gr-2 gr-2 gr-3 gr-3"
+        					 "gr-1 gr-1 gr-2 gr-2 gr-3 gr-3"
+        					 "gr-1 gr-1 gr-2 gr-2 gr-3 gr-3"
+        					 "gr-1 gr-1 gr-5 gr-5 gr-3 gr-3"
+        					 "gr-4 gr-4 gr-5 gr-5 gr-6 gr-6"
+        					 "gr-4 gr-4 gr-5 gr-5 gr-6 gr-6"
+        					 "gr-4 gr-4 gr-5 gr-5 gr-6 gr-6"
+        					 "gr-4 gr-4 gr-8 gr-8 gr-6 gr-6"
+        					 "gr-7 gr-7 gr-8 gr-8 gr-9 gr-9"
+        					 "gr-7 gr-7 gr-8 gr-8 gr-9 gr-9"
+        					 "gr-7 gr-7 gr-8 gr-8 gr-9 gr-9"
+        					 "gr-7 gr-7 gr-11 gr-11 gr-9 gr-9"
+        					 "gr-10 gr-10 gr-11 gr-11 gr-12 gr-12"
+        					 "gr-10 gr-10 gr-11 gr-11 gr-12 gr-12"
+        					 "gr-10 gr-10 gr-11 gr-11 gr-12 gr-12"
+        					 "gr-10 gr-10 . . gr-12 gr-12";
+	    grid-auto-rows: minmax(0,160px);
+    }
+}
