@@ -94,4 +94,13 @@
         }
         position = scroll;
     });
+    /*Scroll top*/
+    var top = $('#scroll-top');
+    $(window).scroll(function() {
+        var act = $(window).scrollTop() > 300 ? 'addClass' : 'removeClass';
+        top[act]('active');
+    });
+    top.click(function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 })(jQuery);

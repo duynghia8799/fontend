@@ -355,3 +355,27 @@ input, button {
 	    grid-auto-rows: minmax(0,160px);
     }
 }
+#scroll-top {
+    display: none;
+    z-index: 99999;
+    position: fixed;
+    bottom: 30px;
+    left: 40px;
+    width: 45px;
+    height: 45px;
+    background: #111111;
+    border-radius: 50%;
+    align-items: center;
+    transition: all .5s;
+    justify-content: center;
+    &:hover {
+        cursor: pointer;
+        background: #525252;
+    }
+}
+
+#scroll-top {
+    &.active {
+        display: flex;
+    }
+}
