@@ -20,10 +20,16 @@ header, main, footer {
     width: 100%;
     height: 100%;
 }
+.containers {
+    max-width: 112rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    box-sizing: border-box;
+}
 img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     &.animate-style {
         animation: zoompic 8s ease-in-out infinite alternate;
         -webkit-animation: zoompic 8s ease-in-out infinite alternate;
@@ -78,6 +84,9 @@ input, button {
     &__aside {
         grid-column: 1;
         grid-row: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 #button-menu {
@@ -94,12 +103,6 @@ input, button {
         background: rgb(245, 245, 245);
         border-radius: 52px;
         cursor: pointer;
-    }
-    .line {
-        width: 17px;
-        height: 2px;
-        background: #000;
-        margin: 2px 0;
     }
 }
 .search-wrapper {
@@ -214,6 +217,7 @@ input, button {
     display: flex;
     flex-direction: row;
     align-items: center;
+        padding: 15px 0 0;
     &__text {
         width: 50%;
         p {
@@ -305,6 +309,9 @@ input, button {
         &-12 {
             grid-area: gr-12;
         }
+    }
+    &--2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     &--3 {
         grid-template-columns: repeat(3, minmax(0, 1fr));

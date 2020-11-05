@@ -1,0 +1,90 @@
+@media only screen and (max-width: 1367px) {
+    .grid-column {
+        grid-gap: 10px;
+        &--gallery-five {
+            grid-auto-rows: minmax(0,92px);
+        }
+        &--gallery-main {
+            grid-auto-rows: minmax(0,120px);
+        }
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .wrapper {
+        &__main {
+            grid-column: ~"1 / 14";
+        }
+        &__aside {
+            display: none !important;
+        }
+    }
+    #button-menu {
+        display: none;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .group-option {
+        &__text {
+            width: 100%;
+        }
+    }
+    .fillter-bar {
+        display: none;
+    }
+    .grid-column {
+        grid-gap: 10px;
+        &--gallery-five {
+            grid-template-areas: "gr-1 gr-1"
+                                 "gr-1 gr-1"
+                                 "gr-1 gr-1"
+                                 "gr-1 gr-1"
+                                 "gr-1 gr-1"
+                                 "gr-1 gr-1"
+                                 "gr-1 gr-1"
+                                 "gr-2 gr-3"
+                                 "gr-2 gr-3"
+                                 "gr-2 gr-3"
+                                 "gr-4 gr-3"
+                                 "gr-4 gr-5"
+                                 "gr-4 gr-5"
+                                 "gr-4 gr-5";
+        }
+        &--gallery-main {
+            grid-auto-rows: minmax(0, 70px);
+        }
+    }
+}
+@media only screen and (max-width: 540px) {
+    
+    .grid-column {
+        &--gallery-five {
+            grid-auto-rows: minmax(0,50px);
+        }
+        &--gallery-main {
+            grid-auto-rows: minmax(0, 50px);
+            grid-template-areas: "gr-1 gr-1 gr-2 gr-2"
+                                 "gr-1 gr-1 gr-2 gr-2"
+                                 "gr-1 gr-1 gr-2 gr-2"
+                                 "gr-1 gr-1 gr-4 gr-4"
+                                 "gr-3 gr-3 gr-4 gr-4"
+                                 "gr-3 gr-3 gr-4 gr-4"
+                                 "gr-3 gr-3 gr-4 gr-4"
+                                 "gr-3 gr-3 gr-6 gr-6"
+                                 "gr-5 gr-5 gr-6 gr-6"
+                                 "gr-5 gr-5 gr-6 gr-6"
+                                 "gr-5 gr-5 gr-6 gr-6"
+                                 "gr-5 gr-5 gr-8 gr-8"
+                                 "gr-7 gr-7 gr-8 gr-8"
+                                 "gr-7 gr-7 gr-8 gr-8"
+                                 "gr-7 gr-7 gr-8 gr-8"
+                                 "gr-7 gr-7 gr-10 gr-10"
+                                 "gr-9 gr-9 gr-10 gr-10"
+                                 "gr-9 gr-9 gr-10 gr-10"
+                                 "gr-9 gr-9 gr-10 gr-10"
+                                 "gr-9 gr-9 gr-12 gr-12"
+                                 "gr-11 gr-11 gr-12 gr-12"
+                                 "gr-11 gr-11 gr-12 gr-12"
+                                 "gr-11 gr-11 gr-12 gr-12";
+        }
+    }
+}

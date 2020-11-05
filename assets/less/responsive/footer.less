@@ -1,0 +1,19 @@
+@media only screen and (max-width: 768px) {
+    footer {
+    	padding: 2.675rem 0 0;
+        .main-footer {
+            flex-direction: column;
+            &__left {
+                flex-basis: 0;
+                padding: 0;
+                margin-bottom: 20px;
+            }
+            &__right {
+                flex-basis: 0;
+                .grid-column {
+	                grid-template-columns: repeat(1, minmax(0, 1fr));
+	            }
+            }
+        }
+    }
+}
