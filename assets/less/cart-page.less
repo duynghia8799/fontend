@@ -1,0 +1,224 @@
+.cart-content {
+    max-width: 768px;
+    width: 100%;
+    margin: 50px auto;
+    h2 {
+        font-size: 36px;
+        font-weight: 700;
+    }
+    &>.main-button {
+        width: 100%;
+        height: 3.5rem;
+        background: #0058a3;
+        margin-top: 40px;
+        .main-button__text {
+            font-size: 14px;
+        }
+    }
+    &__main {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__item {
+            width: 100%;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            padding: 40px 0;
+            border-bottom: 1px solid #dfdfdf;
+            &__img {
+                margin: 0 56px 0 74px;
+                img {
+                    min-width: 140px;
+                    height: 140px;
+                }
+            }
+            &__info {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
+    }
+    .cart-products {
+        width: 80%;
+        padding-right: 15px;
+        .name {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: block;
+        }
+        .property {
+            display: block;
+            padding: 15px 0;
+            li {
+                font-size: 14px;
+                font-weight: 400;
+                display: block;
+                margin: 10px 0;
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+        .options {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            &__amount {
+                display: flex;
+                align-items: center;
+                width: 35%;
+                position: relative;
+                select {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    width: 100%;
+                    outline: 0;
+                    padding: .625rem 2.25rem .625rem 1.25rem;
+                    text-align: left;
+                    text-align-last: left;
+                    border-radius: 40px;
+                    text-indent: 0;
+                    background: transparent;
+                    z-index: 1;
+                    border: 1px solid #dfdfdf;
+                    font-weight: 700;
+                    box-sizing: border-box;
+                    font-size: 16px;
+                    transform: scale(.85);
+                    transform-origin: left center;
+                    padding: .78125rem 2.8125rem .78125rem 1.5rem;
+                    border-radius: 50px;
+                    transition: all .5s;
+                    position: relative;
+                    &:hover {
+                        border: 1px solid #929292;
+                    }
+                }
+                .icon {
+                    position: absolute;
+                    right: 35px;
+                }
+            }
+            &__remove {
+                width: 65%;
+                a {
+                    font-size: 14px;
+                    color: #484848 !important;
+                    transition: all .5s;
+                    &:hover {
+                        color: #111111 !important;
+                    }
+                }
+            }
+        }
+    }
+    .cart-price {
+        width: 20%;
+        text-align: right;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .discount {
+        margin: 50px 0;
+        width: 100%;
+        &__control {
+            font-size: 14px;
+            display: block;
+            margin-bottom: 30px;
+        }
+        &__note {
+            display: flex;
+            align-items: center;
+            p {
+                margin-left: 15px !important;
+                font-size: 14px;
+            }
+        }
+        &__data {
+            margin-top: 30px;
+            width: 100%;
+            position: relative;
+            .effect-input {
+                width: 100%;
+                border: 0;
+                padding: 1.125rem 0 .25rem;
+                font-size: 1rem;
+                line-height: 1.625;
+                background: transparent;
+                border-bottom: 1px solid #ccc;
+            }
+        }
+        &__submit {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+            background: transparent;
+            .main-button {
+                height: 4rem;
+                padding: 0 2.5rem;
+                &__text {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .order {
+        margin-top: 40px;
+        h3 {
+            font-size: 14px;
+            font-weight: 700;
+            display: block;
+            padding-bottom: 20px;
+        }
+        &__service {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            font-weight: 400;
+            border-bottom: 2px solid #111111;
+            padding-bottom: 20px;
+        }
+        &__total {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+            &-label {
+                font-size: 14px;
+                font-weight: 700;
+            }
+            &-value {
+                font-weight: bold;
+                font-size: 22px;
+            }
+        }
+    }
+    .note-order {
+        flex-direction: column;
+        align-items: center;
+        margin: 40px 0 !important;
+        li {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            h4 {
+                display: block;
+                font-size: 14px;
+                font-weight: 700;
+            }
+            .icon {
+                margin-right: 15px;
+            }
+        }
+    }
+}

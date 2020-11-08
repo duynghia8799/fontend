@@ -23,6 +23,20 @@
     }
 }
 @media only screen and (max-width: 768px) {
+    #close-sidebar {
+        right: 20px;
+        left: unset;
+    }
+    .sidebar {
+        width: 100%;
+        &__top {
+          
+            justify-content: space-between;
+        }
+        &__main {
+            padding: 0 30px;
+        }
+    }
     .group-option {
         &__text {
             width: 100%;
@@ -55,7 +69,6 @@
     }
 }
 @media only screen and (max-width: 540px) {
-    
     .grid-column {
         &--gallery-five {
             grid-auto-rows: minmax(0,50px);
