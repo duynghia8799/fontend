@@ -1,10 +1,7 @@
 (function($) {
     var shopHome = new Swiper('#category-shop .swiper-container', {
         loop: true,
-        autoplay: {
-            delay: 3000,
-        },
-        speed: 1500,
+        speed: 0,
         scrollbar: {
             el: '.swiper-scrollbar',
             draggable: true,
@@ -44,9 +41,9 @@
                 slidesPerView: 1,
             },
         },
-    })
+    });
     var blogHome = new Swiper('#category-blog .swiper-container', {
-        speed: 1500,
+        speed: 0,
         spaceBetween: 22,
         breakpoints: {
             1600: {
@@ -77,7 +74,38 @@
                 slidesPerView: 1,
             },
         },
-    })
+    });
+    var blogBlog = new Swiper('#blog-page .swiper-container', {
+        loop: true,
+        speed: 0,
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+        },
+        navigation: {
+            nextEl: '#blog-page .swiper-button-next',
+            prevEl: '#blog-page .swiper-button-prev',
+            hideOnClick: true
+        },
+        spaceBetween: 22,
+        breakpoints: {
+            768: {
+                slidesPerView: 3,
+            },
+            640: {
+                slidesPerView: 2.5,
+            },
+            425: {
+                slidesPerView: 2,
+            },
+            375: {
+                slidesPerView: 1,
+            },
+            0: {
+                slidesPerView: 1,
+            },
+        },
+    });
     /* Sticky menu */
     var position = $(window).scrollTop();
     var widthwd = $(window).width();
@@ -130,4 +158,11 @@
             $("body").css("overflow", "visible");
         }
     });
+    $('.products .grid-column__item__info__variations-property__color').hover(function() {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        } else {
+            $(this).addClass('active');
+        }
+    })
 })(jQuery);

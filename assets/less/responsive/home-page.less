@@ -32,17 +32,20 @@
             .grid-column {
                 grid-column-gap: 10px;
                 grid-row-gap: 10px;
-                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        .category {
+            .my-carousel {
+                &__column {
+                    &-link {
+                        padding: 0 10px;
+                    }
+                }
             }
         }
         .blog-gallery {
             .grid-column {
                 padding: 30px 0;
-            }
-        }
-        .hot-products {
-            .grid-column {
-                grid-template-columns: repeat(1, minmax(0, 1fr));
             }
         }
     }
@@ -51,7 +54,11 @@
     #main {
         .choose-us {
             .grid-column {
-                grid-template-columns: repeat(1, minmax(0, 1fr));
+                &__item {
+                    &__info {
+                        padding: 20px;
+                    }
+                }
             }
         }
     }
