@@ -208,6 +208,43 @@
             },
         },
     });
+    var recenlyProduct = new Swiper('#product-detail-page .product-recently .swiper-container', {
+        loop: true,
+        speed: 0,
+        scrollbar: {
+            el: '#product-detail-page .product-recently .swiper-scrollbar',
+            draggable: true,
+        },
+        navigation: {
+            nextEl: '#product-detail-page .product-recently .swiper-button-next',
+            prevEl: '#product-detail-page .product-recently .swiper-button-prev',
+            hideOnClick: true
+        },
+        spaceBetween: 22,
+        breakpoints: {
+            1200: {
+                slidesPerView: 10,
+            },
+            1024: {
+                slidesPerView: 8,
+            },
+            768: {
+                slidesPerView: 6,
+            },
+            640: {
+                slidesPerView: 4,
+            },
+            425: {
+                slidesPerView: 2,
+            },
+            375: {
+                slidesPerView: 1,
+            },
+            0: {
+                slidesPerView: 1,
+            },
+        },
+    });
     /* Sticky menu */
     var position = $(window).scrollTop();
     var widthwd = $(window).width();
