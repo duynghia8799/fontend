@@ -1,18 +1,12 @@
 header {
-    background: #ffffff;
-}
-#header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
     height: 92px;
-    .main-header {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-        height: 92px;
-        background: #ffffff;
-        align-items: center;
-        &--fixed {
+    background: #ffffff;
+    align-items: center;
+        &.fixed {
             pointer-events: none;
             transition: transform 0.5s;
             z-index: 99;
@@ -24,6 +18,16 @@ header {
             pointer-events: all;
             transform: translateY(100%);
         }
+}
+#header {
+    width: 100%;
+    height: 92px;
+    .main-header {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 92px;
+        align-items: center;
         &__logo {
             width: 90px;
             height: auto;

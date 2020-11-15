@@ -1,6 +1,6 @@
 @media only screen and (max-width: 768px) {
     footer {
-    	padding: 2.675rem 0 0;
+        padding: 2.675rem 0 0;
         .main-footer {
             flex-direction: column;
             &__left {
@@ -11,8 +11,22 @@
             &__right {
                 flex-basis: 0;
                 .grid-column {
-	                grid-template-columns: repeat(1, minmax(0, 1fr));
-	            }
+                    grid-template-columns: repeat(1, minmax(0, 1fr));
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 375px) {
+    footer {
+        #footer {
+            
+            .main-footer {
+                flex-wrap: nowrap;
+                &__social {
+                    flex-wrap: wrap;
+                    align-items: center;
+                }
             }
         }
     }
