@@ -312,5 +312,19 @@
             $("body").css("overflow", "visible");
         }
     });
-   
+    /* Change layout  */
+    $('#category-page #change-layout').click(function(){
+        var subcate = $('#category-page .subcategory .grid-column');
+        if (subcate.hasClass('grid-column--3')){
+            subcate.removeClass('grid-column--3');
+            subcate.addClass('grid-column--6');
+        } else {
+            subcate.removeClass('grid-column--6');
+            subcate.addClass('grid-column--3');
+        }
+    });
+    /* Add to compare */
+    $('#category-page #add-to-compare').click(function() {
+        alert('zo');
+    })
 })(jQuery);

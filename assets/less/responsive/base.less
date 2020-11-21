@@ -21,6 +21,11 @@
     #button-menu {
         display: none;
     }
+    .grid-column {
+        &--6 {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+    }
 }
 @media only screen and (max-width: 1024px) {
     .grid-column {
@@ -55,6 +60,9 @@
     .grid-column {
         &--3 {
             grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+        &--6 {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
         }
         &--gallery-five {
             grid-template-areas: "gr-1 gr-1"
